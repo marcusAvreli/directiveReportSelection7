@@ -1,0 +1,12 @@
+<!--h1>identity</h1-->
+
+ <div class="app">
+      <dynamic-form
+        [config]="config"
+        #form="dynamicForm"
+        (submit)="submit($event)">
+      </dynamic-form>
+      {{ form.valid }}
+      {{ form.value | json }}
+    </div>
+	

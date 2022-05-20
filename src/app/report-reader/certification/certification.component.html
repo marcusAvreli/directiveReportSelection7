@@ -1,0 +1,16 @@
+<h1>Certification Component</h1>
+<form [formGroup]="facturaForm" novalidate>
+	<div>
+		<div>
+		<control-select [control]="facturaForm.controls['ClaveProveedor']" [controlName]="'ClaveProveedor'"
+			[label]="'Clave Proveedor'" [placeHolder]="'Clave Proveedor'" [valuePrimitive]="true" 
+			[disabled]="disabled" [valueField]="'id'" [showId]="false" [allowNulls]="false"
+			[title]="'Catálogo de Proveedores'" 
+			[dataSource]="proveedorArray" 
+			[textField]="'name'"
+			(eventValueChange)="proveedor_OnSelect($event)">
+		</control-select>
+		</div>
+	</div>
+</form>
+<ng-template report-host></ng-template>

@@ -1,0 +1,18 @@
+<form [formGroup]="facturaForm" novalidate>
+	<div>
+		<div>
+		<control-select [control]="facturaForm.controls['ClaveProveedor']" [controlName]="'ClaveProveedor'"
+			[label]="'Report List'" [placeHolder]="'Clave Proveedor'" [valuePrimitive]="true" 
+			[disabled]="disabled" [valueField]="'id'" [showId]="false" [allowNulls]="false"
+			[title]="'רשימת דוחות'" 
+			[dataSource]="proveedorArray" 
+			[textField]="'name'"
+			(eventValueChange)="proveedor_OnSelect($event)">
+		</control-select>
+		</div>
+	</div>
+</form>  
+<div *ngIf="label">
+
+<app-filter [label]="label"></app-filter>
+</div>
